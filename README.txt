@@ -1,7 +1,7 @@
 === CP Polls ===
 Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/forms/cp-polls
-Tags: poll,polls,form,forms,vote,votes,statistics,stats,feedback,evaluation
+Tags: poll,polls,form,forms,vote,votes,statistics,stats,feedback,evaluation,voting,plugin
 Requires at least: 3.0.5
 Tested up to: 4.0
 Stable tag: 1.0.1
