@@ -135,7 +135,7 @@ It can be used also for different alignment of the field labels.
 
 = Q: Can I align the form horizontally in two or more columns? =
 
-A: Into the poll form editor click a field and into its settings there is one field named "Add Css Layout Keywords". Into that field you can put the name of a CSS class that will be applied to the field.
+A: Into the poll form editor click a field and into its settings there is one field named "Add CSS Layout Keywords". Into that field you can put the name of a CSS class that will be applied to the field.
 
 There are some pre-defined CSS classes to use align two, three or four fields into the same line. The CSS classes are named:
 
@@ -285,8 +285,10 @@ When you click a field already added into the poll form builder area, you can ed
 
 = 1.0.1 =
 * First CP Polls stable version released.
+* Visual form builder included to design the polls
 
 == Upgrade Notice ==
 
 = 1.0.1 =
 * First CP Polls stable version released.
+* Visual form builder included to design the polls
