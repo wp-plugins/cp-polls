@@ -218,7 +218,7 @@ if ($message) echo "<div id='setting-error-settings_updated' class='updated sett
  
 
  <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>New Form</span></h3>
+  <h3 class='hndle' style="padding:5px;"><span>New Poll</span></h3>
   <div class="inside"> 
    
     <form name="additem">
