@@ -232,7 +232,7 @@ if ($message) echo "<div id='setting-error-settings_updated' class='updated sett
 
 
  <div id="metabox_basic_settings" class="postbox" >
-  <h3 class='hndle' style="padding:5px;"><span>Automatic email reports for ALL polls: Send submissions in CSV format via email</span></h3>
+  <h3 class='hndle' style="padding:5px;"><span>Automatic email reports for ALL polls: Send votes in CSV format via email</span></h3>
   <div class="inside">
      <form name="updatereportsettings" action="" method="post">
      <table class="form-table">    
