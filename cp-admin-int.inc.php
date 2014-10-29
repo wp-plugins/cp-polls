@@ -526,7 +526,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
 <p class="submit"><input type="submit" name="submit" id="submit" class="button-primary" value="Save Changes"  /></p>
 
 
-[<a href="http://wordpress.dwbooster.com/support" target="_blank">Request Custom Modifications</a>] | [<a href="<?php echo $this->plugin_URL; ?>" target="_blank">Help</a>]
+[<a href="http://wordpress.dwbooster.com/support?product=cp-polls&ref=dashboard" target="_blank">Request Custom Modifications</a>] | [<a href="<?php echo $this->plugin_URL; ?>" target="_blank">Help</a>]
 </form>
 </div>
 <script type="text/javascript">generateCaptcha();</script>
