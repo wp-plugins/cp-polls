@@ -86,7 +86,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
                  rep_emailformat VARCHAR(10) DEFAULT '' NOT NULL,
                  rep_message text,
 
-                 cv_enable_captcha VARCHAR(20) DEFAULT '' NOT NULL,
+                 cv_enable_captcha VARCHAR(10) DEFAULT '' NOT NULL,
                  cv_width VARCHAR(20) DEFAULT '' NOT NULL,
                  cv_height VARCHAR(20) DEFAULT '' NOT NULL,
                  cv_chars VARCHAR(20) DEFAULT '' NOT NULL,
