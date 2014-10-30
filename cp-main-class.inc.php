@@ -97,7 +97,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
                  cv_noise_length VARCHAR(20) DEFAULT '' NOT NULL,
                  cv_background VARCHAR(20) DEFAULT '' NOT NULL,
                  cv_border VARCHAR(20) DEFAULT '' NOT NULL,
-                 cv_text_enter_valid_captcha VARCHAR(200) DEFAULT '' NOT NULL,
+                 cv_text_enter_valid_captcha VARCHAR(250) DEFAULT '' NOT NULL,
 
                  UNIQUE KEY id (id)
             );";
