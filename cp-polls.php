@@ -45,7 +45,7 @@ define('CP_POLLS_DEFAULT_vs_text_max', 'Please enter a value less than or equal 
 define('CP_POLLS_DEFAULT_vs_text_min', 'Please enter a value greater than or equal to {0}.');
 
 define('CP_POLLS_DEFAULT_cv_enable_captcha', 'false');
-define('CP_POLLS_DEFAULT_cv_width', '180');
+define('CP_POLLS_DEFAULT_cv_width', '170');
 define('CP_POLLS_DEFAULT_cv_height', '60');
 define('CP_POLLS_DEFAULT_cv_chars', '5');
 define('CP_POLLS_DEFAULT_cv_font', 'font-1.ttf');
