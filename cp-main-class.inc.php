@@ -493,6 +493,10 @@ class CP_Polls extends CP_POLLS_BaseClass {
                ( (strtolower($this->get_param('hdcaptcha_'.$this->prefix.'_post')) != strtolower($_SESSION['rand_code'.$sequence])) ||
                  ($_SESSION['rand_code'.$sequence] == '')
                )
+               &&
+               ( (md5(strtolower($this->get_param('hdcaptcha_'.$this->prefix.'_post'))) != ($_COOKIE['rand_code'.$sequence])) ||
+                 ($_COOKIE['rand_code'.$sequence] == '')
+               )
            )
         {
             echo 'captchafailed';
