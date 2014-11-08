@@ -292,5 +292,6 @@ When you click a field already added into the poll form builder area, you can ed
 = 1.0.1 =
 * First CP Polls stable version released.
 * Visual form builder included to design the polls
+* Fixed minor XSS vulnerabiliy in votes list
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
