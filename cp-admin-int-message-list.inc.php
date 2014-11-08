@@ -161,7 +161,7 @@ echo paginate_links(  array(
 		<td><?php echo substr($events[$i]->time,0,16); ?></td>
 		<td><?php echo $events[$i]->notifyto; ?></td>
 		<td><?php 
-		        //echo str_replace("\n","<br />",$events[$i]->data); 
+		       
 		        $data = $events[$i]->data;		        
 		        $posted_data = unserialize($events[$i]->posted_data);		        
 		        foreach ($posted_data as $item => $value)
