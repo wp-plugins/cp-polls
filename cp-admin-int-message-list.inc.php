@@ -169,7 +169,7 @@ echo paginate_links(  array(
 		            {
 		                $data = str_replace ($posted_data[str_replace("_url","",$item)],'<a href="'.$value.'" target="_blank">'.$posted_data[str_replace("_url","",$item)].'</a><br />',$data);  		                
 		            }    
-		        echo str_replace("\n","<br />",$data); 
+		        echo str_replace("\n","<br />", str_replace('<','&lt;',$data) ); 
 		    ?></td>
 		<td class="cpnopr">
 		  <input type="button" name="caldelete_<?php echo $events[$i]->id; ?>" value="Delete" onclick="cp_deleteMessageItem(<?php echo $events[$i]->id; ?>);" />                             
