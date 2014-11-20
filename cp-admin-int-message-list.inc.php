@@ -6,7 +6,7 @@ if ( !is_admin() )
     exit;
 }
 
-$this->item = $_GET["cal"];
+$this->item = intval($_GET["cal"]);
 
 global $wpdb;
 
