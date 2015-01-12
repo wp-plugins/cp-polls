@@ -42,6 +42,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
           <select name="poll_limit">
            <option value="0"<?php if (!$option || $option == '0') echo ' selected'; ?>>One per visitor (using cookies)</option>
            <option value="1"<?php if ($option == '1') echo ' selected'; ?>>One per IP address</option>
+           <option value="3"<?php if ($option == '3') echo ' selected'; ?>>Both limits: one per IP address and Cookie</option>
            <option value="2"<?php if ($option == '2') echo ' selected'; ?>>Don't limit votes</option>
           </select>
         </td>

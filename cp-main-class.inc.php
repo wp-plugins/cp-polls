@@ -567,7 +567,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
         $rows_affected = $wpdb->insert( $wpdb->prefix.$this->table_messages, array( 'formid' => $this->item,
                                                                                     'time' => current_time('mysql'),
                                                                                     'ipaddr' => $_SERVER['REMOTE_ADDR'],
-                                                                                    'notifyto' => $_POST[$to.$sequence],
+                                                                                    'notifyto' => @$_POST[$to.$sequence],
                                                                                     'posted_data' => serialize($params),
                                                                                     'data' =>$buffer_A
                                                                                    ) );
@@ -594,18 +594,21 @@ class CP_Polls extends CP_POLLS_BaseClass {
     }
 
     function has_already_voted() {
+        global $wpdb;
         $limit = $this->get_option('poll_limit', CP_POLLS_POLL_LIMIT);
         if ($limit == '2')
             return false;
-        else if ($limit == '1')
+        
+        if ($limit == '1' || $limit == '3')
         {
             $events = $wpdb->get_results( "SELECT id FROM ".$wpdb->prefix.$this->table_messages." WHERE formid=".$this->item." AND ipaddr='".esc_sql($_SERVER["REMOTE_ADDR"])."'" );
-            return count($events);
+            if ($limit != '3' || count($events) > 0)
+                 return count($events);     
         }
-        else
-        {
-            return (isset ($_COOKIE[$this->prefix."_voted_".$this->item]) && $_COOKIE[$this->prefix."_voted_".$this->item] == "1");  
-        }
+            
+        // other case apply cookie restriction
+        return (isset ($_COOKIE[$this->prefix."_voted_".$this->item]) && $_COOKIE[$this->prefix."_voted_".$this->item] == "1");  
+        
     }
 
     function print_poll_results() {
@@ -629,7 +632,11 @@ class CP_Polls extends CP_POLLS_BaseClass {
             $params = unserialize($item->posted_data);
             foreach ($params as $param => $value)
                 if (strlen($value) < 100)
-                    $fields[$param]["k".$value]++;    
+                {
+                    if (!isset($fields[$param]["k".$value]))
+                        $fields[$param]["k".$value] = 0;
+                    @$fields[$param]["k".$value]++;    
+                }    
         }
         if ($form_setup[1][0]->title != '')
             echo '<h1>'.$form_setup[1][0]->title.'</h1>';
@@ -817,7 +824,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
                       'fp_emailformat' => $_POST['fp_emailformat'],
 
                       'cu_enable_copy_to_user' => $_POST['cu_enable_copy_to_user'],
-                      'cu_user_email_field' => $_POST['cu_user_email_field'],
+                      'cu_user_email_field' => @$_POST['cu_user_email_field'],
                       'cu_subject' => $_POST['cu_subject'],
                       'cu_message' => $_POST['cu_message'],
                       'cu_emailformat' => $_POST['cu_emailformat'],

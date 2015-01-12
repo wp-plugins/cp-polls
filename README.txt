@@ -4,7 +4,7 @@ Donate link: http://wordpress.dwbooster.com/forms/cp-polls
 Tags: poll,polls,form,forms,vote,votes,statistics,stats,feedback,evaluation,voting,plugin,survey,post
 Requires at least: 3.0.5
 Tested up to: 4.1
-Stable tag: 1.0.1
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -286,12 +286,14 @@ When you click a field already added into the poll form builder area, you can ed
 = 1.0.1 =
 * First CP Polls stable version released.
 * Visual form builder included to design the polls
+* Fixed minor XSS vulnerabiliy in votes list
+
 
 == Upgrade Notice ==
 
-= 1.0.1 =
-* First CP Polls stable version released.
-* Visual form builder included to design the polls
-* Fixed minor XSS vulnerabiliy in votes list
+= 1.0.2 =
+* Compatible with latest WP versions
+* Bug fixed in the verification of limits per IP address
+* New feature to filter by both IP and Cookies
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
