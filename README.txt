@@ -1,7 +1,7 @@
 === CP Polls ===
 Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/forms/cp-polls
-Tags: poll,polls,form,forms,vote,votes,statistics,stats,feedback,evaluation,voting,plugin,survey,post
+Tags: poll,polls,form,forms,voting,plugin,survey,post,vote,votes,statistics,stats,feedback,evaluation
 Requires at least: 3.0.5
 Tested up to: 4.1
 Stable tag: trunk
@@ -296,5 +296,6 @@ When you click a field already added into the poll form builder area, you can ed
 * Bug fixed in the verification of limits per IP address
 * New feature to filter by both IP and Cookies
 * Fixed notices that appeared with WP_DEBUG in true
+* Fixed issue with tags
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
