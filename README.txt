@@ -295,5 +295,6 @@ When you click a field already added into the poll form builder area, you can ed
 * Compatible with latest WP versions
 * Bug fixed in the verification of limits per IP address
 * New feature to filter by both IP and Cookies
+* Fixed notices that appeared with WP_DEBUG in true
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
