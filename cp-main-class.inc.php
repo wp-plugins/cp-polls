@@ -236,7 +236,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
     		                           'id' => '',
     	                        ), $atts ) );
         if ($id != '')
-            $this->item = $id;
+            $this->item = intval($id);
         ob_start();
         $this->insert_public_item();
         $buffered_contents = ob_get_contents();
@@ -412,7 +412,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
         global $wpdb;
         if ($this->get_param("cal"))
         {
-            $this->item = $this->get_param("cal");
+            $this->item = intval($this->get_param("cal"));
             if ($this->get_param("list") == '1')
                 @include_once dirname( __FILE__ ) . '/cp-admin-int-message-list.inc.php';
             else if ($this->get_param("report") == '1')
@@ -466,7 +466,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
 
         if ($this->get_param($this->prefix.'_loadresults') == '1' )
         {
-            $this->item = $this->get_param($this->prefix.'_id');
+            $this->item = intval($this->get_param($this->prefix.'_id'));
             $this->print_poll_results();
             exit;
         }
@@ -487,7 +487,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
     	    if ( 'GET' != $_SERVER['REQUEST_METHOD'] || !isset( $_GET['hdcaptcha_'.$this->prefix.'_post'] ) )
     		    return;
 
-        if ($this->get_param($this->prefix.'_id')) $this->item = $this->get_param($this->prefix.'_id');
+        if ($this->get_param($this->prefix.'_id')) $this->item = intval($this->get_param($this->prefix.'_id'));
 
         @session_start();
         if (isset($_GET["ps"])) $sequence = $_GET["ps"]; else if (isset($_POST["cp_pform_psequence"])) $sequence = $_POST["cp_pform_psequence"];
@@ -542,8 +542,8 @@ class CP_Polls extends CP_POLLS_BaseClass {
         foreach ($_POST as $item => $value)
             if (isset($fields[str_replace($sequence,'',$item)]))
             {
-                $buffer .= $fields[str_replace($sequence,'',$item)] . ": ". (is_array($value)?(implode(", ",$value)):($value)) . "\n\n";
-                $params[str_replace($sequence,'',$item)] = $value;
+                $buffer .= $fields[str_replace($sequence,'',$item)] . ": ". htmlspecialchars ((is_array($value)?(implode(", ",$value)):($value))) . "\n\n";
+                $params[str_replace($sequence,'',$item)] = (is_array($value)?$value:htmlspecialchars($value));
             }
 
         foreach ($_FILES as $item => $value)
@@ -793,7 +793,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
     function save_options()
     {
         global $wpdb;
-        $this->item = $_POST[$this->prefix."_id"];
+        $this->item = intval($_POST[$this->prefix."_id"]);
 
         foreach ($_POST as $item => $value)
             $_POST[$item] = stripcslashes($value);
