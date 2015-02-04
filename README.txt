@@ -288,6 +288,13 @@ When you click a field already added into the poll form builder area, you can ed
 * Visual form builder included to design the polls
 * Fixed minor XSS vulnerabiliy in votes list
 
+= 1.0.2 =
+* Compatible with latest WP versions
+* Bug fixed in the verification of limits per IP address
+* New feature to filter by both IP and Cookies
+* Fixed notices that appeared with WP_DEBUG in true
+* Fixed issue with tags
+* Fixed warning that appeared with PHP safe mode restrictions 
 
 == Upgrade Notice ==
 
@@ -297,5 +304,6 @@ When you click a field already added into the poll form builder area, you can ed
 * New feature to filter by both IP and Cookies
 * Fixed notices that appeared with WP_DEBUG in true
 * Fixed issue with tags
+* Fixed warning that appeared with PHP safe mode restrictions 
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
