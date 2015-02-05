@@ -45,6 +45,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
            <option value="3"<?php if ($option == '3') echo ' selected'; ?>>Both limits: one per IP address and Cookie</option>
            <option value="2"<?php if ($option == '2') echo ' selected'; ?>>Don't limit votes</option>
           </select>
+        <br ><span style=font-size:11px;">* Note: <a href="http://wordpress.dwbooster.com/forms/cp-polls#download">Professional version</a> also supports the option "<strong>One per WordPress logged in user - retricts votes to logged in users</strong>".</span>
         </td>
         </tr>
         <tr valign="top">
