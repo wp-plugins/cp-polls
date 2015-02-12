@@ -19,7 +19,7 @@ if (isset($_GET['lu']) && $_GET['lu'] != '')
 }
 else if (isset($_GET['ld']) && $_GET['ld'] != '')
 {
-    $wpdb->query('DELETE FROM `'.$wpdb->prefix.$this->table_messages.'` WHERE id='.$_GET['ld']);       
+    $wpdb->query('DELETE FROM `'.$wpdb->prefix.$this->table_messages.'` WHERE id='.intval($_GET['ld']));       
     $message = "Item deleted";
 }
 else if (isset($_GET['import']) && $_GET['import'] == '1')
