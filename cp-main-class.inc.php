@@ -26,8 +26,8 @@ class CP_Polls extends CP_POLLS_BaseClass {
                 time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
                 ipaddr VARCHAR(32) DEFAULT '' NOT NULL,
                 notifyto VARCHAR(250) DEFAULT '' NOT NULL,
-                data text,
-                posted_data text,
+                data mediumtext,
+                posted_data mediumtext,
                 UNIQUE KEY id (id)
             );";
             $wpdb->query($sql);
@@ -41,7 +41,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
 
                  form_name VARCHAR(250) DEFAULT '' NOT NULL,
 
-                 form_structure text,
+                 form_structure mediumtext,
 
                  poll_limit VARCHAR(10) DEFAULT '' NOT NULL,
                  poll_private_reports VARCHAR(10) DEFAULT '' NOT NULL,
