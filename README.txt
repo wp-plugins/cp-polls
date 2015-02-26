@@ -296,14 +296,23 @@ When you click a field already added into the poll form builder area, you can ed
 * Fixed issue with tags
 * Fixed warning that appeared with PHP safe mode restrictions 
 
+= 1.0.3 = 
+* Fixed notices that appeared with WP_DEBUG in true
+* Fixed issues with tags that doesnt appear correctly in the listing page.
+* Update to sanitize posted data and escaping HTML
+
+= 1.0.4 = 
+* Update to avoid safe mode restriction warning.
+* Improved query security
+* Fixed notices that appeared with WP_DEBUG in true
+* Fixed issues related to the get_site_url when WP site not in the default
+
 == Upgrade Notice ==
 
-= 1.0.2 =
-* Compatible with latest WP versions
-* Bug fixed in the verification of limits per IP address
-* New feature to filter by both IP and Cookies
+= 1.0.4 =
+* Update to avoid safe mode restriction warning.
+* Improved query security
 * Fixed notices that appeared with WP_DEBUG in true
-* Fixed issue with tags
-* Fixed warning that appeared with PHP safe mode restrictions 
+* Fixed issues related to the get_site_url when WP site not in the default
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support

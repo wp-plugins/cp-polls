@@ -630,13 +630,14 @@ class CP_Polls extends CP_POLLS_BaseClass {
         foreach ($events as $item)
         {
             $params = unserialize($item->posted_data);
-            foreach ($params as $param => $value)
-                if (strlen($value) < 100)
-                {
-                    if (!isset($fields[$param]["k".$value]))
-                        $fields[$param]["k".$value] = 0;
-                    @$fields[$param]["k".$value]++;    
-                }    
+            if (is_array($params))
+                foreach ($params as $param => $value)
+                    if (strlen($value) < 100)
+                    {
+                        if (!isset($fields[$param]["k".$value]))
+                            $fields[$param]["k".$value] = 0;
+                        @$fields[$param]["k".$value]++;    
+                    }    
         }
         if ($form_setup[1][0]->title != '')
             echo '<h1>'.$form_setup[1][0]->title.'</h1>';

@@ -3,7 +3,7 @@
 Plugin Name: CP Polls
 Plugin URI: http://wordpress.dwbooster.com/forms/cp-polls
 Description: Create classic polls and advanced polls with dependant questions.
-Version: 1.0.3
+Version: 1.0.4
 Author: CodePeople.net
 Author URI: http://codepeople.net
 License: GPL
