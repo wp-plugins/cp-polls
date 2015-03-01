@@ -467,7 +467,10 @@ class CP_Polls extends CP_POLLS_BaseClass {
         if ($this->get_param($this->prefix.'_loadresults') == '1' )
         {
             $this->item = intval($this->get_param($this->prefix.'_id'));
-            $this->print_poll_results();
+            if ($this->get_option('poll_private_reports', CP_POLLS_POLL_PRIVATE_REPORTS) == 'false')
+                $this->print_poll_results();
+            else 
+                echo $this->get_option('poll_text_private', CP_POLLS_POLL_TEXT_PRIVATE); 
             exit;
         }
 
