@@ -81,7 +81,7 @@ else if (isset($_GET['ac']) && $_GET['ac'] == 'st')
     update_option( 'CP_POLLS_LOAD_SCRIPTS', ($_GET["scr"]=="1"?"0":"1") );   
     if ($_GET["chs"] != '')
     {
-        $target_charset = $_GET["chs"];
+        $target_charset = esc_sql($_GET["chs"]);
         $tables = array( $wpdb->prefix.$this->table_messages, $wpdb->prefix.$this->table_items );                
         foreach ($tables as $tab)
         {  
