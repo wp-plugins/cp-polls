@@ -306,6 +306,7 @@ When you click a field already added into the poll form builder area, you can ed
 * Improved query security
 * Fixed notices that appeared with WP_DEBUG in true
 * Fixed issues related to the get_site_url when WP site not in the default
+* Compatible with the latest WordPress 4.2.x version
 
 == Upgrade Notice ==
 
