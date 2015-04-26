@@ -856,7 +856,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
                       'rep_emailformat' => $_POST['rep_emailformat'],
                       'rep_message' => $_POST['rep_message'],
 
-                      'cv_enable_captcha' => $_POST['cv_enable_captcha'],
+                      'cv_enable_captcha' => @$_POST['cv_enable_captcha'],
                       'cv_width' => $_POST['cv_width'],
                       'cv_height' => $_POST['cv_height'],
                       'cv_chars' => $_POST['cv_chars'],
