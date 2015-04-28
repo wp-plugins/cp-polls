@@ -54,7 +54,7 @@
 #fbuilder div.cpefb_error{background:#FDF9E5;border:1px solid #f00;opacity:0.9;margin-top:7px;position:relative;padding:0px 5px;z-index:1000;}
 #fbuilder div.cpefb_error:after{content:"";position:absolute;background:transparent url("../images/tooltop.gif") no-repeat scroll 10px center;color:red;font-weight:bold;height:8px;width:100%;top:-8px;left:0px;z-index:1000;}
 
-#fbuilder .ui-datepicker{ z-index:9999 !important;}
+#fbuilder .ui-datepicker{ z-index:99999 !important;}
 #fbuilder span.uh{display:block;font-size:80%;clear:both;}
 #fbuilder .section_break{border-top:1px dotted #555;clear:both;}
 
