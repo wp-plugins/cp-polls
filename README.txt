@@ -308,12 +308,13 @@ When you click a field already added into the poll form builder area, you can ed
 * Fixed issues related to the get_site_url when WP site not in the default
 * Compatible with the latest WordPress 4.2.x version
 
+= 1.0.5 =
+* Compatible with the WordPress 4.2.1 version
+
 == Upgrade Notice ==
 
-= 1.0.4 =
-* Update to avoid safe mode restriction warning.
-* Improved query security
-* Fixed notices that appeared with WP_DEBUG in true
-* Fixed issues related to the get_site_url when WP site not in the default
+= 1.0.5 =
+* Compatible with the WordPress 4.2.1 version
+
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
