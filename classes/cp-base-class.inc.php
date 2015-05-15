@@ -103,11 +103,16 @@ class CP_POLLS_BaseClass {
         else
         {  
            $myrows = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix.$this->table_items." WHERE id=".$this->item );
-           $value = @$myrows[0]->$field;           
-           $this->option_buffered_item = $myrows[0];
-           $this->option_buffered_id  = $this->item;
+           if (count($myrows))
+           {
+               $value = @$myrows[0]->$field;           
+               $this->option_buffered_item = $myrows[0];
+               $this->option_buffered_id  = $this->item;
+           }
+           else 
+               $value = $default_value;    
         }
-        if ($value == '' && $this->option_buffered_item->form_structure == '')
+        if ($value == '' && @$this->option_buffered_item->form_structure == '')
             $value = $default_value;
         return $value;
     }
