@@ -323,7 +323,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
 	        	$dexQuery.ajax({
                         type: "POST",
                         async: true,
-                        url: '<?php $this->get_site_url(); ?>/',
+                        url: '<?php echo $this->get_site_url(); ?>/',
                         data: $dexQuery( "#<?php echo $this->prefix; ?>_pform<?php echo '_'.$this->print_counter; ?>" ).serialize()
                       }) .done(function( msg ) {                       <?php if ($this->get_option('fp_return_page', CP_POLLS_DEFAULT_fp_return_page) != '') { ?>
                          document.location = '<?php echo str_replace("'","\'",$this->get_option('fp_return_page', CP_POLLS_DEFAULT_fp_return_page)); ?>';
@@ -339,7 +339,7 @@ class CP_Polls extends CP_POLLS_BaseClass {
             $dexQuery.ajax({
                         type: "POST",
                         async: true,
-                        url: '<?php $this->get_site_url(); ?>/',
+                        url: '<?php echo $this->get_site_url(); ?>/',
                         data: {<?php echo $this->prefix; ?>_loadresults: "1", <?php echo $this->prefix; ?>_id: "<?php echo $this->item; ?>"}
                       }) .done(function( msg ) {                                                
                          $dexQuery( "#<?php echo $this->prefix; ?>_pform<?php echo '_'.$this->print_counter; ?>" ).hide();
@@ -645,10 +645,11 @@ class CP_Polls extends CP_POLLS_BaseClass {
         }
         if ($form_setup[1][0]->title != '')
             echo '<h1>'.$form_setup[1][0]->title.'</h1>';
+        $counter = 0;   
         foreach ($fields as $fieldname => $arr) 
             if (is_array($arr) && count($arr) > 0)
             {
-                echo '<div class="cpbox"><div class="cpquestion">'.$fobjects[$fieldname].'</div>';
+                echo '<div class="cpbox" id="cpres'.$counter.'"><div class="cpquestion">'.$fobjects[$fieldname].'</div>';
                 arsort($arr, SORT_NUMERIC);
                 $total = 0;
                 $totalsize = 100;
