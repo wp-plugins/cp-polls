@@ -14,7 +14,7 @@ if (isset($_GET['a']) && $_GET['a'] == '1')
     define('CP_POLLS_DEFAULT_fp_destination_emails', CP_POLLS_DEFAULT_fp_from_email);
     
     $wpdb->insert( $wpdb->prefix.$this->table_items, array( 
-                                      'form_name' => stripcslashes($_GET["name"]),
+                                      'form_name' => stripcslashes(strip_tags($_GET["name"])),
 
                                       'form_structure' => $this->get_option('form_structure', CP_POLLS_DEFAULT_form_structure),
 
@@ -61,7 +61,7 @@ if (isset($_GET['a']) && $_GET['a'] == '1')
 } 
 else if (isset($_GET['u']) && $_GET['u'] != '')
 {
-    $wpdb->query('UPDATE `'.$wpdb->prefix.$this->table_items.'` SET form_name="'.esc_sql($_GET["name"]).'" WHERE id='.intval($_GET['u']));
+    $wpdb->query('UPDATE `'.$wpdb->prefix.$this->table_items.'` SET form_name="'.esc_sql(strip_tags($_GET["name"])).'" WHERE id='.intval($_GET['u']));
     $message = "Item updated";        
 }
 else if (isset($_GET['d']) && $_GET['d'] != '')

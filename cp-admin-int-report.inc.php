@@ -103,7 +103,7 @@ else
 
 <div id="normal-sortables" class="meta-box-sortables">
  <hr />
- <h3>This report is for: <?php if ($this->item != 0) echo $myform[0]->form_name; else echo 'All forms'; ?></h3>
+ <h3>This report is for: <?php if ($this->item != 0) echo htmlentities($myform[0]->form_name); else echo 'All forms'; ?></h3>
 </div>
 
 
@@ -120,7 +120,7 @@ else
    <?php
     $myrows = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix.$this->table_items );                                                                     
     foreach ($myrows as $item)  
-         echo '<option value="'.$item->id.'"'.(intval($item->id)==intval($this->item)?" selected":"").'>'.$item->form_name.'</option>'; 
+         echo '<option value="'.$item->id.'"'.(intval($item->id)==intval($this->item)?" selected":"").'>'.htmlentities($item->form_name).'</option>'; 
    ?>
     </select></nobr>
  <nobr><span class="submit"><input type="submit" name="ds" value="Filter" /></span> &nbsp; &nbsp; &nbsp; 

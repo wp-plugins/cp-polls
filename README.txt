@@ -310,11 +310,13 @@ When you click a field already added into the poll form builder area, you can ed
 
 = 1.0.5 =
 * Compatible with the WordPress 4.2.2 version
+* Fixed XSS vulnerability
 
 == Upgrade Notice ==
 
 = 1.0.5 =
 * Compatible with the WordPress 4.2.2 version
+* Fixed XSS vulnerability
 
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
