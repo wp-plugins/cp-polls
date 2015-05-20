@@ -100,7 +100,7 @@ if ($message) echo "<div id='setting-error-settings_updated' class='updated sett
 
 <div id="normal-sortables" class="meta-box-sortables">
  <hr />
- <h3>This message list is from: <?php if ($this->item != 0) echo $myform[0]->form_name; else echo 'All forms'; ?></h3>
+ <h3>This message list is from: <?php if ($this->item != 0) echo htmlentities($myform[0]->form_name); else echo 'All forms'; ?></h3>
 </div>
 
 
@@ -116,7 +116,7 @@ if ($message) echo "<div id='setting-error-settings_updated' class='updated sett
    <?php
     $myrows = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix.$this->table_items );                                                                     
     foreach ($myrows as $item)  
-         echo '<option value="'.$item->id.'"'.(intval($item->id)==intval($this->item)?" selected":"").'>'.$item->form_name.'</option>'; 
+         echo '<option value="'.$item->id.'"'.(intval($item->id)==intval($this->item)?" selected":"").'>'.htmlentities($item->form_name).'</option>'; 
    ?>
     </select></nobr>
  <nobr><span class="submit"><input type="submit" name="ds" value="Filter" /></span> &nbsp; &nbsp; &nbsp; 
