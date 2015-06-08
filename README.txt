@@ -118,6 +118,11 @@ If the problem persists after that modification please contact our support servi
 A: Use the "troubleshoot area" to change the character encoding. Try first with the UTF-8 option.
 
 
+= Q:  How I can disable sending email to me everytime that somone voted ? =
+
+A: Leave the "Destination emails" settings field empty to disable the email after each vote.
+
+
 = Q: I'm getting this message: "Destination folder already exists". Solution? =
 
 A: The free version must be deleted before installing the pro version.
