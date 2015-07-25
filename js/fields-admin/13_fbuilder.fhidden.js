@@ -15,6 +15,6 @@
 			predefined:"",
 			display:function()
 				{
-					return 'Available in <a href="http://wordpress.dwbooster.com/forms/cp-polls#download">pro version</a>.';
+					return 'Available only in <a href="http://wordpress.dwbooster.com/forms/cp-polls#download">commercial versions</a>.';
 				}
 	});
