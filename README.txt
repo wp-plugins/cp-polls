@@ -317,11 +317,18 @@ When you click a field already added into the poll form builder area, you can ed
 * Compatible with the WordPress 4.2.2 version
 * Fixed XSS vulnerability
 
+= 1.0.6 =
+* Compatible with the WordPress 4.2.3 version
+* Fixed issue related to the captcha image with zLib library
+* Fixed bug in cache function and added ID to results.
+* Fixed bug in the URLs used for Ajax calls.
+
 == Upgrade Notice ==
 
-= 1.0.5 =
-* Compatible with the WordPress 4.2.2 version
-* Fixed XSS vulnerability
-
+= 1.0.6 =
+* Compatible with the WordPress 4.2.3 version
+* Fixed issue related to the captcha image with zLib library
+* Fixed bug in cache function and added ID to results.
+* Fixed bug in the URLs used for Ajax calls.
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
