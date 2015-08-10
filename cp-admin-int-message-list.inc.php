@@ -93,7 +93,7 @@ if ($message) echo "<div id='setting-error-settings_updated' class='updated sett
  }
 </script>
 <div class="wrap">
-<h2><?php echo $this->plugin_name; ?> - Message List</h2>
+<h1><?php echo $this->plugin_name; ?> - Message List</h1>
 
 <input type="button" name="backbtn" value="Back to items list..." onclick="document.location='admin.php?page=<?php echo $this->menu_parameter; ?>';">
 

@@ -17,7 +17,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_POST[$this->prefix.'_post_
 
 ?>
 <div class="wrap">
-<h2><?php echo $this->plugin_name; ?></h2>
+<h1><?php echo $this->plugin_name; ?></h1>
 
 <input type="button" name="backbtn" value="Back to items list..." onclick="document.location='options-general.php?page=<?php echo $this->menu_parameter; ?>';">
 <br /><br />
